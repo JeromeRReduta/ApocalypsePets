@@ -1,22 +1,28 @@
 fileFormatVersion: 2
-guid: a6b44ee77b6882c4ca616d825653e2cc
+guid: 66a26a49c799d2142b7da38a8f261c9e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8764429337487615040
-    second: Dog Running Sprite 1_0
+      213: 5342142321447103424
+    second: Dog_Jump_Sprite_0
   - first:
-      213: -6911522152982014751
-    second: Dog Running Sprite 1_1
+      213: 2797441269732167109
+    second: Dog_Jump_Sprite_1
   - first:
-      213: 7848321223448600289
-    second: Dog Running Sprite 1_2
+      213: 1265803825815279441
+    second: Dog_Jump_Sprite_2
   - first:
-      213: -4049857283553184179
-    second: Dog Running Sprite 1_3
+      213: -4240015009559381259
+    second: Dog_Jump_Sprite_3
   - first:
-      213: 8189727348347932384
-    second: Dog Running Sprite 1_0
+      213: -6902904772295437980
+    second: Dog_Jump_Sprite_4
+  - first:
+      213: 6348733249949118315
+    second: Dog_Jump_Sprite_5
+  - first:
+      213: -3692391210000168968
+    second: Dog_Jump_Sprite_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dog Running Sprite 1_0
+      name: Dog_Jump_Sprite_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 200
-        height: 200
+        y: 250
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ee849dd1a1c7a170800000000000000
-      internalID: 8189727348347932384
+      spriteID: 0cb6f61332a132a40800000000000000
+      internalID: 5342142321447103424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog Running Sprite 1_1
+      name: Dog_Jump_Sprite_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 200
-        height: 200
+        x: 125
+        y: 250
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +145,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e4934e78375510a0800000000000000
-      internalID: -6911522152982014751
+      spriteID: 5cd476a630282d620800000000000000
+      internalID: 2797441269732167109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog Running Sprite 1_2
+      name: Dog_Jump_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 250
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157dc018fd9019110800000000000000
+      internalID: 1265803825815279441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Jump_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa73e830d07825c0800000000000000
+      internalID: -4240015009559381259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Jump_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4615bf8cea4f330a0800000000000000
+      internalID: -6902904772295437980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Jump_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 125
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fade8f04b3b1850800000000000000
+      internalID: 6348733249949118315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_Jump_Sprite_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 200
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,29 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ee10de0296daec60800000000000000
-      internalID: 7848321223448600289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dog Running Sprite 1_3
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d46b8c6f1440cc7c0800000000000000
-      internalID: -4049857283553184179
+      spriteID: 8f74a24f1cdf1ccc0800000000000000
+      internalID: -3692391210000168968
       vertices: []
       indices: 
       edges: []
