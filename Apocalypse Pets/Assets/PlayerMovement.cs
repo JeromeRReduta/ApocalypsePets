@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
+            UnityEngine.Debug.Log("JUMP");
         }
 
         if (Input.GetButtonDown("Crouch"))
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
+        UnityEngine.Debug.Log("LANDED");
     }
 
     void FixedUpdate()
