@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: a6b44ee77b6882c4ca616d825653e2cc
+guid: 5888e69192751944e8e21d5ffa816bf5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8764429337487615040
-    second: Dog Running Sprite 1_0
+      213: 1839630977076011607
+    second: Dog_Running_Sprite_0
   - first:
-      213: -6911522152982014751
-    second: Dog Running Sprite 1_1
+      213: 1763489919393647760
+    second: Dog_Running_Sprite_1
   - first:
-      213: 7848321223448600289
-    second: Dog Running Sprite 1_2
+      213: -1440288060100648412
+    second: Dog_Running_Sprite_2
   - first:
-      213: -4049857283553184179
-    second: Dog Running Sprite 1_3
-  - first:
-      213: 8189727348347932384
-    second: Dog Running Sprite 1_0
+      213: 3408671866385783272
+    second: Dog_Running_Sprite_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dog Running Sprite 1_0
+      name: Dog_Running_Sprite_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 200
-        height: 200
+        y: 187.5
+        width: 187.5
+        height: 187.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ee849dd1a1c7a170800000000000000
-      internalID: 8189727348347932384
+      spriteID: 752ab6a70aea78910800000000000000
+      internalID: 1839630977076011607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog Running Sprite 1_1
+      name: Dog_Running_Sprite_1
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 200
-        height: 200
+        x: 187
+        y: 187.5
+        width: 187.5
+        height: 187.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e4934e78375510a0800000000000000
-      internalID: -6911522152982014751
+      spriteID: 09cc0720dbc297810800000000000000
+      internalID: 1763489919393647760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog Running Sprite 1_2
+      name: Dog_Running_Sprite_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 200
-        height: 200
+        y: 0.5
+        width: 187.5
+        height: 187.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ee10de0296daec60800000000000000
-      internalID: 7848321223448600289
+      spriteID: 422e67be3a1130ce0800000000000000
+      internalID: -1440288060100648412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog Running Sprite 1_3
+      name: Dog_Running_Sprite_3
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 200
-        height: 200
+        x: 187
+        y: 0.5
+        width: 187.5
+        height: 187.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d46b8c6f1440cc7c0800000000000000
-      internalID: -4049857283553184179
+      spriteID: 8e9dac7a0090e4f20800000000000000
+      internalID: 3408671866385783272
       vertices: []
       indices: 
       edges: []

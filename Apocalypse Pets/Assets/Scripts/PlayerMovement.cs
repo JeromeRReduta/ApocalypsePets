@@ -9,45 +9,48 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
 
     public float runSpeed = 40f;
+    public float runMultiplier = 3f;
 
     float horizontalMove = 0f;
-    bool jump = false;
-    bool crouch = false;
+
+    public bool Jump { get; set; } = false;
+    public bool Crouch { get; set; } = false;
+
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
 
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+       
       
-
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            jump = true;
-
-            UnityEngine.Debug.Log("JUMP");
+            UnityEngine.Debug.Log("BOOST");
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed * runMultiplier;
+            
+        }
+        else
+        {
+            UnityEngine.Debug.Log("NO BOOST");
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         }
 
+        UnityEngine.Debug.Log("SPPEEEEED:\t" + horizontalMove);
         if (Input.GetButtonDown("Crouch"))
         {
-            crouch = true;
+            Crouch = true;
         }
         else if (Input.GetButtonUp("Crouch"))
         {
-            crouch = false;
+            Crouch = false;
         }
 
     }
 
-    public void onLanding()
-    {
-        UnityEngine.Debug.Log("LANDED");
-    }
-
-    void FixedUpdate()
+    public virtual void FixedUpdate()
     {
         // Move our character
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-        jump = false;
+        controller.Move(horizontalMove * Time.fixedDeltaTime, Crouch, Jump);
+        Jump = false;
     }
 }

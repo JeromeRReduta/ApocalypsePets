@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class DogMovement : PlayerMovement
 {
-    /*
+    
 
     public override void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            base.setJump(true);
-            base.getAnimator().SetBool("IsJumping", true);
+            base.Jump = true;
         }
 
         base.Update();
     }
-    */
+
+    public override void FixedUpdate()
+    {
+        base.FixedUpdate();
+    }
+    
 }

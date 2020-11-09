@@ -119,6 +119,7 @@ public class CharacterController2D : MonoBehaviour
 				}
 			}
 			animator.SetFloat("Speed", Mathf.Abs(move));
+			UnityEngine.Debug.Log("CURRENT SPEED:\t" + Mathf.Abs(move));
 			animator.SetBool("IsJumping", true);
 
 				// Move the character by finding the target velocity
