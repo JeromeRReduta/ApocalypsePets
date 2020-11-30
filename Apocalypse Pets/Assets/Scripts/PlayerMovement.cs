@@ -7,8 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController2D controller;
-
-    public float runSpeed = 40f;
+    public float moveSpeed = 40f;
     public float runMultiplier = 3f;
 
     float horizontalMove = 0f;
@@ -21,21 +20,20 @@ public class PlayerMovement : MonoBehaviour
     public virtual void Update()
     {
 
-       
-      
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-        {
-            UnityEngine.Debug.Log("BOOST");
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed * runMultiplier;
-            
-        }
-        else
-        {
-            UnityEngine.Debug.Log("NO BOOST");
-            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        }
+        move();
+        checkForCrouch();
 
-        UnityEngine.Debug.Log("SPPEEEEED:\t" + horizontalMove);
+    }
+
+    void move()
+    {
+
+        horizontalMove = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) ? Input.GetAxisRaw("Horizontal") * moveSpeed * runMultiplier : Input.GetAxisRaw("Horizontal") * moveSpeed;
+
+    }
+    void checkForCrouch()
+    {
+
         if (Input.GetButtonDown("Crouch"))
         {
             Crouch = true;
@@ -52,5 +50,6 @@ public class PlayerMovement : MonoBehaviour
         // Move our character
         controller.Move(horizontalMove * Time.fixedDeltaTime, Crouch, Jump);
         Jump = false;
+
     }
 }

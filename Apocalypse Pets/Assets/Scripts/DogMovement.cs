@@ -8,14 +8,20 @@ public class DogMovement : PlayerMovement
 
     public override void Update()
     {
+
+        checkForJump();
+        base.Update();
+    }
+
+
+    void checkForJump()
+    {
         if (Input.GetButtonDown("Jump"))
         {
             base.Jump = true;
         }
 
-        base.Update();
     }
-
     public override void FixedUpdate()
     {
         base.FixedUpdate();
