@@ -1,0 +1,132 @@
+Char Controller 2D:
+
+	Note: SerializeFields mean that they're in disk space? Kind of like static vars?
+
+	Or used so inspector (in this case, Unity editor) can see and maybe set var's value
+	(https://forum.unity.com/threads/when-to-use-serializefield-and-why.184687/)
+
+
+UML:
+	Vars:
+		m_jumpForce: float // # of force added on player jump
+		m_CrouchSpeed: float // % of maxSpeed applied when crouching
+		m_MovementSmoothing: float // Used for movement smoothing
+
+		m_AirControl: whether or not a player can move char in air
+
+		m_WhatIsGround: LayerMask // LayerMask that determines what char considers "ground"
+
+		m_GroundCheck: Transform // Hitbox detector for ground (set in editor)
+		m_CeilingCheck: Transform // Hitbox detector for ceiling (set in editor)
+		
+		m_CrouchDisableCollider: Collider2D // Which collider (hitbox) to disable
+			when crouching
+
+		
+		k_GroundedRadius: const float // Radius of overlap circle for ground check func
+		m_Grounded: bool // Is the player on ground?
+		k_CeilingRadius: const float // Radius of overlap circle for ceiling check func
+	
+
+		m_RigidBody2D: RigidBody2D // The physics part of char
+		m_FacingRight: bool // Is player facing right?
+		m_Velocity: Vector3 // Think this is velocity of player
+
+		animator: Animator // Added by me thanks to unity forum - processes char
+			animations
+
+		OnLandEvent: UnityEvent // unused
+		BoolEvent: New class // unused???
+
+		OnCrouchEvent: BoolEvent // also unused???
+
+		m_wasCrouching: bool // was the char crouching
+
+	Funcs:
+		
+		Awake() - initalize this class
+		Create m_RigidBody2D and set to GetComponent<RigidBody2D>()
+		
+		Init OnLandEvent if null
+		Init OnCrouchEvent if null
+
+
+		public void Move(float move, bool crouch, bool jump)
+			// CROUCHING LOGIC
+			If not crouching:
+		
+				Check if char is under ceiling too low to uncrouch
+					w/ Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius,
+						m_whatIsGround)
+
+					If true, set crouch to true
+
+			If grounded or air control is on:
+				If crouching:
+					If was not crouching before:
+						Set m_wasCrouching = true
+						Invoke OncrouchEvent(true)
+
+					Multiply speed by m_CrouchSpeed
+
+					If m_CrouchDisableCollider exists, disable it
+
+				Else (not crouching):
+					If m_CrouchDisableCollider exists, enable it
+					
+					If was crouching before:
+						Set m_wasCrouching to false
+						Invoke OnCrouchEvent(false)
+
+
+			// MOVEMENT LOGIC
+			Set Animator value "Speed" to Math.Abs(move) (value for speed)
+
+			Create targetVelocity and set to new Vector2(move * 10f, m_Rigidbody2D.velocity.y)
+			Smooth out velocity w/ Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity,
+				ref m_Velocity, m_MovementSmoothing)
+
+				Note: ref varName = pass varName by reference
+
+			Set m_Rigidbody2D.velocity to above Vector3.SmoothDamp(...)
+
+			// FLIP LOGIC
+
+			If player moving right and facing left:
+				Flip char model
+
+			Else if player moving left and facing right:
+				Flip char model
+
+			
+			// JUMP LOGIC
+			If player is grounded and wants to jump
+				set m_grounded to false
+				In Animator, set "IsJumping" to true
+				add vertical force to char w/:
+					m_Rigidbody2D.AddForce(new Vector2(0f, m_jumpForce))
+
+				
+
+
+		private void Flip():
+			set m_FacingRight to !m_FacingRight (set bool to opposite value)
+
+			Create Vector3 caled theScale and set to transform.localScale
+			theScale.x *= -1 (reverse x value, but not y value)
+			transform.localScale = theScale
+
+			
+
+				
+	
+
+			
+	
+
+	
+		
+
+
+
+
